@@ -1,11 +1,11 @@
-# 📊 Log Analyzer
+Log Analyzer
 
 A lightweight **Bash + Docker** project that analyzes web server access logs and generates insightful reports (Top IPs, Endpoints, and Status Codes).  
 Built for practicing **Unix/Linux scripting, containerization, and automation with Makefiles**.
 
 ---
 
-## 🚀 Features
+Features
 
 - Parse and analyze **Apache/Nginx-style access logs**
 - Extract:
@@ -18,7 +18,7 @@ Built for practicing **Unix/Linux scripting, containerization, and automation wi
 
 ---
 
-## 🛠️ Tech Stack
+Tech Stack
 
 - **Bash** (core analysis logic)  
 - **GNU tools**: `awk`, `sort`, `uniq`  
@@ -27,17 +27,14 @@ Built for practicing **Unix/Linux scripting, containerization, and automation wi
 
 ---
 
-## ⚡ Getting Started
+Getting Started
 
 ### 1. Clone the repository
-```bash
 git clone https://github.com/your-username/log-analyzer.git
 cd log-analyzer
-
 docker build -t log-analyzer .
 make run
 cat report.txt
-
 
 log-analyzer/
 ├── scripts/
@@ -46,6 +43,7 @@ log-analyzer/
 ├── Makefile            # Automation commands
 ├── access.log          # Sample log file
 └── report.txt          # Generated analysis output
+
 
 <img width="895" height="99" alt="image" src="https://github.com/user-attachments/assets/bff270ef-595b-4a24-9a1a-d11287d05a47" />
 <img width="913" height="473" alt="image" src="https://github.com/user-attachments/assets/81a86d9a-d822-458f-ac93-d922c8423a62" />
