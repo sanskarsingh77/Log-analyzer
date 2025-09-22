@@ -2,7 +2,7 @@
 LOG_FILE=/app/access.log
 REPORT_FILE=/app/report.txt
 
-# Generate random logs dynamically
+
 NUM_LINES=10
 > $LOG_FILE
 for i in $(seq 1 $NUM_LINES); do
@@ -14,15 +14,13 @@ done
 
 echo "=== Log Analysis Report ===" > $REPORT_FILE
 
-# Top 5 IPs
+
 echo -e "\nTop 5 IP addresses:" >> $REPORT_FILE
 awk '{print $1}' $LOG_FILE | sort | uniq -c | sort -nr | head -5 >> $REPORT_FILE
 
-# Status code counts
 echo -e "\nHTTP Status Codes:" >> $REPORT_FILE
 awk '{print $9}' $LOG_FILE | sort | uniq -c | sort -nr >> $REPORT_FILE
 
-# Requests per endpoint
 echo -e "\nTop Endpoints:" >> $REPORT_FILE
 awk '{print $7}' $LOG_FILE | sort | uniq -c | sort -nr | head -5 >> $REPORT_FILE
 
