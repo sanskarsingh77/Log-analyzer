@@ -1,4 +1,4 @@
-=== Log Analysis Report ===
+ Log Analysis Report
 
 Top 5 IP addresses:
       3 127.0.0.1
